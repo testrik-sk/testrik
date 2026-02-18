@@ -1,0 +1,75 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="mainGr" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="innerGr" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+    <linearGradient id="txtGr" x1="60" y1="0" x2="340" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="45%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#8b5cf6" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="200" cy="160" r="130" fill="#0f0f1a" opacity=".95"/>
+
+  <!-- Outer hexagon crystal -->
+  <g filter="url(#softShadow)">
+    <path d="M200 40 L310 100 L310 220 L200 280 L90 220 L90 100 Z" fill="url(#mainGr)" opacity=".92"/>
+  </g>
+
+  <!-- Inner hexagon layer -->
+  <path d="M200 65 L290 112 L290 208 L200 255 L110 208 L110 112 Z" fill="url(#innerGr)" opacity=".25"/>
+
+  <!-- Inner glow hexagon -->
+  <path d="M200 90 L270 125 L270 195 L200 230 L130 195 L130 125 Z" fill="#a855f7" opacity=".08"/>
+
+  <!-- T Letter mark - bold and clean -->
+  <g filter="url(#glow)">
+    <!-- T horizontal bar -->
+    <rect x="145" y="120" width="110" height="24" rx="12" fill="#ffffff" opacity=".95"/>
+    <!-- T vertical bar -->
+    <rect x="188" y="120" width="24" height="110" rx="12" fill="#ffffff" opacity=".95"/>
+  </g>
+
+  <!-- Sparkle accents -->
+  <g opacity=".9">
+    <!-- Top right sparkle cluster -->
+    <circle cx="318" cy="58" r="10" fill="#f59e0b"/>
+    <circle cx="335" cy="42" r="5" fill="#fbbf24" opacity=".7"/>
+    <circle cx="308" cy="44" r="3" fill="#fbbf24" opacity=".5"/>
+
+    <!-- Bottom left sparkle -->
+    <circle cx="80" cy="265" r="6" fill="#ec4899" opacity=".6"/>
+    <circle cx="68" cy="278" r="3" fill="#f472b6" opacity=".4"/>
+
+    <!-- Small accent dots -->
+    <circle cx="340" cy="180" r="3" fill="#8b5cf6" opacity=".4"/>
+    <circle cx="60" cy="130" r="3" fill="#ec4899" opacity=".3"/>
+  </g>
+
+  <!-- Refraction lines on crystal -->
+  <line x1="145" y1="80" x2="115" y2="115" stroke="#fff" stroke-width="1.5" opacity=".15" stroke-linecap="round"/>
+  <line x1="255" y1="80" x2="285" y2="115" stroke="#fff" stroke-width="1.5" opacity=".1" stroke-linecap="round"/>
+
+  <!-- Text: 테스트릭 -->
+  <text x="200" y="340" text-anchor="middle" font-family="'Noto Serif KR','Noto Sans KR',Georgia,serif" font-size="52" font-weight="900" fill="url(#txtGr)">테스트릭</text>
+
+  <!-- Text: TESTRIK -->
+  <text x="200" y="375" text-anchor="middle" font-family="'Pretendard','Apple SD Gothic Neo','Segoe UI',sans-serif" font-size="20" fill="#94a3b8" letter-spacing="8" font-weight="700">TESTRIK</text>
+</svg>
