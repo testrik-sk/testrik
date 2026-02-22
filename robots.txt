@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://testrik.co.kr/sitemap.xml
